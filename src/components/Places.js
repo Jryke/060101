@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 class Places extends React.Component {
 	state = {
@@ -41,6 +40,11 @@ class Places extends React.Component {
 		return (
 			<div>
 				<h1>{this.state.places.length}</h1>
+				<div className="thumbnails">
+					{this.state.places.map((obj, i) => {
+						return <div key={i} className='thumbnail'>{obj.title} {obj.price} {obj.location}</div>
+					})}
+				</div>
 			</div>
 		)
 	}
