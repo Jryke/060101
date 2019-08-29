@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Places from './components/Places';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Places />, document.getElementById('root'));

@@ -1,0 +1,49 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+class Places extends React.Component {
+	state = {
+		places: [
+			{
+				title: 'Mansion',
+				price: 1000,
+				location: 'Lamai'
+			},
+			{
+				title: 'House',
+				price: 500,
+				location: 'Chaweng'
+			},
+			{
+				title: 'Hotel',
+				price: 250,
+				location: 'Maenam'
+			},
+			{
+				title: 'Bungalow',
+				price: 100,
+				location: 'Pha-ngan'
+			},
+			{
+				title: 'Hut',
+				price: 50,
+				location: 'Maret'
+			},
+			{
+				title: 'Tent',
+				price: 20,
+				location: 'Thong Krut'
+			}
+		]
+	}
+
+	render() {
+		return (
+			<div>
+				<h1>Places component</h1>
+			</div>
+		)
+	}
+}
+
+export default Places
