@@ -1,4 +1,5 @@
 import React from 'react'
+import '../styles/Thumbnail.css'
 
 class Thumbnail extends React.Component {
 	state = {
@@ -7,7 +8,11 @@ class Thumbnail extends React.Component {
 
 	render() {
 		return (
-			<div className='thumbnail'>{this.props.place.title} {this.props.place.price} {this.props.place.location}</div>
+			<div className='thumbnail'>
+				<span>{this.props.place.title} </span>
+				<span>{this.props.place.price} </span>
+				<span>{this.props.place.location} </span>
+			</div>
 		)
 	}
 }
