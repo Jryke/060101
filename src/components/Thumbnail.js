@@ -4,11 +4,6 @@ import '../styles/Thumbnail.css'
 class Thumbnail extends React.Component {
 	state = {
 		place: this.props.place,
-		liked: false
-	}
-
-	toggleLike() {
-		this.state.liked === false ? this.setState({liked: true}) : this.setState({liked: false})
 	}
 
 	render() {
