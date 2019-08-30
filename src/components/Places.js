@@ -2,6 +2,7 @@ import React from 'react'
 import '../styles/Places.css'
 import Favorites from './Favorites'
 import Thumbnail from './Thumbnail'
+import Search from './Search'
 
 class Places extends React.Component {
 	state = {
@@ -60,6 +61,7 @@ class Places extends React.Component {
 		return (
 			<div>
 				<h1>{this.state.places.length}</h1>
+				<Search />
 				<div className="thumbnails">
 					{this.state.places.map((place, i) => <Thumbnail key={i} place={place} toggleLike={this.toggleLike} />)}
 				</div>
