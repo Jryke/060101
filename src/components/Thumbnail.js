@@ -6,6 +6,12 @@ class Thumbnail extends React.Component {
 		place: this.props.place,
 	}
 
+	toggleLike = () => {
+		let place = this.state.place
+		place.liked = !place.liked
+		this.setState({place})
+	}
+
 	render() {
 		return (
 			<div className='thumbnail'>

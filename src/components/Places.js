@@ -9,32 +9,38 @@ class Places extends React.Component {
 			{
 				title: 'Mansion',
 				price: 1000,
-				location: 'Lamai'
+				location: 'Lamai',
+				liked: false
 			},
 			{
 				title: 'House',
 				price: 500,
-				location: 'Chaweng'
+				location: 'Chaweng',
+				liked: false
 			},
 			{
 				title: 'Hotel',
 				price: 250,
-				location: 'Maenam'
+				location: 'Maenam',
+				liked: true
 			},
 			{
 				title: 'Bungalow',
 				price: 100,
-				location: 'Pha-ngan'
+				location: 'Pha-ngan',
+				liked: true
 			},
 			{
 				title: 'Hut',
 				price: 50,
-				location: 'Maret'
+				location: 'Maret',
+				liked: false
 			},
 			{
 				title: 'Tent',
 				price: 20,
-				location: 'Thong Krut'
+				location: 'Thong Krut',
+				liked: false
 			}
 		]
 	}
