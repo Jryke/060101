@@ -6,12 +6,6 @@ class Thumbnail extends React.Component {
 		place: this.props.place,
 	}
 
-	toggleLike = () => {
-		let place = this.state.place
-		place.liked = !place.liked
-		this.setState({place})
-	}
-
 	toggleLikedClass = () => {
 		return this.state.place.liked ? 'liked' : ''
 	}
@@ -22,7 +16,7 @@ class Thumbnail extends React.Component {
 				<span>{this.props.place.title} </span>
 				<span>{this.props.place.price} </span>
 				<span>{this.props.place.location} </span>
-				<button className={this.toggleLikedClass()} onClick={this.toggleLike}>Like</button>
+				<button className={this.toggleLikedClass()} onClick={() => this.props.toggleLike(this.props.place.title)}>Like</button>
 			</div>
 		)
 	}

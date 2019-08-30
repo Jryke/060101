@@ -45,14 +45,25 @@ class Places extends React.Component {
 		]
 	}
 
+	toggleLike = (t) => {
+		let places = this.state.places
+		places.map(place => {
+			if (t === place.title) {
+				place.liked = !place.liked
+			}
+		})
+		this.setState({places})
+
+	}
+
 	render() {
 		return (
 			<div>
 				<h1>{this.state.places.length}</h1>
 				<div className="thumbnails">
-					{this.state.places.map((place, i) => <Thumbnail key={i} place={place} />)}
+					{this.state.places.map((place, i) => <Thumbnail key={i} place={place} toggleLike={this.toggleLike} />)}
 				</div>
-				<Favorites />
+				<Favorites places={this.state.places} toggleLike={this.toggleLike} />
 			</div>
 		)
 	}
