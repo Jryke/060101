@@ -54,7 +54,6 @@ class Places extends React.Component {
 			}
 		})
 		this.setState({places})
-
 	}
 
 	render() {
