@@ -2,12 +2,9 @@ import React from 'react'
 import '../styles/Thumbnail.css'
 
 class Thumbnail extends React.Component {
-	state = {
-		place: this.props.place,
-	}
 
 	toggleLikedClass = () => {
-		return this.state.place.liked ? 'liked' : ''
+		return this.props.place.liked ? 'liked' : ''
 	}
 
 	render() {
