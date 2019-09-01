@@ -8,7 +8,7 @@ class Favorites extends React.Component {
 		return (
 			<div className="favorites">
 				<h1>Favorites:</h1>
-				{this.props.places.filter(place => place.liked).map((place, i) => <Thumbnail key={i} place={place} toggleLike={this.props.toggleLike}/>)}
+				{this.props.filteredFavorites().map((place, i) => <Thumbnail key={i} place={place} toggleLike={this.props.toggleLike}/>)}
 			</div>
 		)
 	}

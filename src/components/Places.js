@@ -62,8 +62,10 @@ class Places extends React.Component {
 		this.setState({searchTerm})
 	}
 
-	filterPlaces = () => this.state.places
+	searchFilterPlaces = () => this.state.places
 		.filter(place => place.title.includes(this.state.searchTerm))
+
+	filterFavorites = () => this.state.places.filter(place => place.liked)
 
 	render() {
 		return (
@@ -71,9 +73,9 @@ class Places extends React.Component {
 				<h1>{this.state.places.length}</h1>
 				<Search setSearchTerm={this.setSearchTerm} value={this.state.searchTerm} />
 				<div className="thumbnails">
-					{this.filterPlaces().map((place, i) => <Thumbnail key={i} place={place} toggleLike={this.toggleLike} />)}
+					{this.searchFilterPlaces().map((place, i) => <Thumbnail key={i} place={place} toggleLike={this.toggleLike} />)}
 				</div>
-				<Favorites places={this.state.places} toggleLike={this.toggleLike} />
+				<Favorites filteredFavorites={this.filterFavorites} toggleLike={this.toggleLike} />
 			</div>
 		)
 	}
