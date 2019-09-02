@@ -7,4 +7,9 @@
 }
 .small-background {
 	height: 200px;
+	width: 300px;
+	margin: 25px;
+}
+.place-outline {
+	border: 3px solid red;
 }
