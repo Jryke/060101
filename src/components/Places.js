@@ -49,7 +49,7 @@ class Places extends React.Component {
 
 	toggleLike = (t) => {
 		let places = this.state.places
-		places.map(place => {
+		places.forEach(place => {
 			if (t === place.title) {
 				place.liked = !place.liked
 			}
