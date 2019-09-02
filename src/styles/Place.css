@@ -1,0 +1,10 @@
+.place-background {
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.large-background {
+	height: 500px;
+}
+.small-background {
+	height: 200px;
+}
